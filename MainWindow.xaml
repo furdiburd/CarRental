@@ -1,0 +1,53 @@
+﻿<Window x:Class="Doga2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doga2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="950" Width="600">
+    <Grid Margin="30">
+        <StackPanel>
+            <TextBlock Text="Autókölcsönző" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+            <TextBlock Text="Adja meg a nevét:" Margin="0,20,0,10" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBox x:Name="textName" Width="500" Height="30" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBlock Text="Adja meg az életkorát:" Margin="0,20,0,10" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBox x:Name="textAge" Width="500" Height="30" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBlock Text="Adja meg a jogosítvány számát:" Margin="0,20,0,10" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBox x:Name="textLicense" Width="500" Height="30" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold"/>
+
+
+            <TextBlock Text="Autó kiválasztása"  HorizontalAlignment="Left" FontSize="16" FontWeight="Bold"/>
+            <ComboBox x:Name="comboCar" Width="500" Height="30" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold">
+                <ComboBoxItem Content="Suzuki Swift 12e ft/nap" Tag="Suzuki Swift"/>
+                <ComboBoxItem Content="Toyota Corolla 18e ft/nap" Tag="Toyota Corolla"/>
+                <ComboBoxItem Content="BMW 3 30e ft/nap" Tag="BMW 3"/>
+                <ComboBoxItem Content="Tesla Model 3 35e ft/nap" Tag="Tesla Model 3"/>
+            </ComboBox>
+            
+            
+            <TextBlock Text="Bérlés időtartama (nap, szám):" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="0,20,0,10"/>
+            <TextBox x:Name="textDays" Width="500" Height="30" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold"/>
+            
+            <TextBlock Text="Biztosítás" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="0,20,0,10"/>
+            <RadioButton x:Name="radioInsuranceBasic" Content="Alap biztosítás - ingyenes" GroupName="Insurance" HorizontalAlignment="Left" FontSize="16" Tag="Alap biztosítás"/>
+            <RadioButton x:Name="radioInsuranceExtra" Content="Extra biztosítás -  3000ft / nap" GroupName="Insurance" HorizontalAlignment="Left" FontSize="16" Tag="Extra biztosítás"/>
+            <RadioButton x:Name="radioInsuranceFull" Content="Teljes biztosítás - 6000ft / nap" GroupName="Insurance" HorizontalAlignment="Left" FontSize="16" Tag="Teljes biztosítás"/>
+            
+            <TextBlock Text="Extra szolgáltatások" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="0,20,0,10"/>
+            <CheckBox x:Name="checkGPS" Content="GPS - 1000ft / nap" HorizontalAlignment="Left" FontSize="16" Tag="GPS"/>
+            <CheckBox x:Name="checkBabySeat" Content="Gyerekülés - 1500ft / nap" HorizontalAlignment="Left" FontSize="16" Tag="Gyerekülés"/>
+            <CheckBox x:Name="checkAdditionalDriver" Content="További sofőr - 2500ft / nap" HorizontalAlignment="Left" FontSize="16" Tag="További sofőr"/>
+            <CheckBox x:Name="checkHighwayVignette" Content="Autópálya matrica - +5000ft egyszeri díj" HorizontalAlignment="Left" FontSize="16" Tag="Autópálya matrica"/>
+            
+            <TextBlock Text="Fizetési mód" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="0,20,0,10"/>
+            <RadioButton x:Name="radioPaymentCash" Content="Készpénz" GroupName="Payment" HorizontalAlignment="Left" FontSize="16"/>
+            <RadioButton x:Name="radioPaymentCard" Content="Bankkártya" GroupName="Payment" HorizontalAlignment="Left" FontSize="16"/>
+
+            
+            <CheckBox x:Name="checkTerms" Content="Elfogadom a bérlési feltételeket" HorizontalAlignment="Left" FontSize="20" Margin="0,20,0,10"/>
+            
+            <Button Content="Autó foglalása" Width="500" Height="40" FontSize="16" HorizontalAlignment="Left" FontWeight="Bold" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
